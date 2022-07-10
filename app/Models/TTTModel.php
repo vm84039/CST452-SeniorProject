@@ -4,80 +4,70 @@ namespace App\Models;
 
 class TTTModel
 {
-    private mixed $player1;
-    private mixed $player2;
-    private mixed $result;
-    private mixed $time;
+    private mixed $first;
+    private mixed $turn;
+    private mixed $win;
 
     /**
-     * @param mixed $player1
+     * @param int|mixed $first
+     * @param int|mixed $turn
+     * @param bool|mixed $win
      */
-    public function __construct(){  }
-
-    /**
-     * @return mixed
-     */
-    public function getPlayer1(): mixed
+    public function __construct(mixed $first, mixed $turn, mixed $win)
     {
-        return $this->player1;
-    }
-
-    /**
-     * @param mixed $player1
-     */
-    public function setPlayer1(mixed $player1): void
-    {
-        $this->player1 = $player1;
+        $this->first = $first;
+        $this->turn = $turn;
+        $this->win = $win;
     }
 
     /**
      * @return mixed
      */
-    public function getPlayer2(): mixed
+    public function getFirst(): mixed
     {
-        return $this->player2;
+        return $this->first;
     }
 
     /**
-     * @param mixed $player2
+     * @param mixed $first
      */
-    public function setPlayer2(mixed $player2): void
+    public function setFirst(mixed $first): void
     {
-        $this->player2 = $player2;
+        $this->first = $first;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTurn(): mixed
+    {
+        return $this->turn;
+    }
+
+    /**
+     * @param mixed $turn
+     */
+    public function setTurn(mixed $turn): void
+    {
+        $this->turn = $turn;
     }
 
     /**
      * @return mixed
      */
-    public function getResult(): mixed
+    public function getWin(): mixed
     {
-        return $this->result;
+        return $this->win;
     }
 
     /**
-     * @param mixed $result
+     * @param mixed $win
      */
-    public function setResult(mixed $result): void
+    public function setWin(mixed $win): void
     {
-        $this->result = $result;
+        $this->win = $win;
     }
 
-
-    /**
-     * @return mixed
-     */
-    public function getTime(): mixed
-    {
-        return $this->time;
-    }
-
-    /**
-     * @param mixed $time
-     */
-    public function setTime(mixed $time): void
-    {
-        $this->time = $time;
-    }
 
 
 

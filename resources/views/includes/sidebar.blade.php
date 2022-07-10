@@ -6,19 +6,19 @@
 
                 <ul class="list-unstyled components">
                     <li class="active">
-                        <a href="home">
+                        <a href="profile">
                             <i class="glyphicon glyphicon-home"></i>
                             Profile
                         </a>
                     </li>
                     <li>
-                        <a href="Games">
+                        <a href="home">
                             <i class="glyphicon glyphicon-briefcase"></i>
                             Games
                         </a>
                     </li>
                     <li>
-                        <a href="Game Statistics">
+                        <a href="statistics">
                             <i class="glyphicon glyphicon-duplicate"></i>
                             Game Statistics
                         </a>

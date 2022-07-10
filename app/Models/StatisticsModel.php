@@ -4,17 +4,15 @@ namespace App\Models;
 
 class StatisticsModel
 {
-    private mixed $id;
-    private mixed $userId;
-    private mixed  $tttWins;
-    private mixed  $tttLosses;
-    private mixed  $tttBestTime;
-    private mixed  $hangmanWins;
-    private mixed  $hangmanLosses;
-    private mixed  $hangmanBestTime;
-    private mixed  $pegWins;
-    private mixed  $pegLosses;
-    private mixed  $pegBestTime;
+    private mixed $id = 0;
+    private mixed $userId =0;
+    private mixed  $tttWins = 0;
+    private mixed  $tttLosses = 0;
+    private mixed  $tttBestTime = "0";
+    private mixed  $tttTies = "0";
+    private mixed  $hangmanWins = 0;
+    private mixed  $hangmanLosses = 0;
+    private mixed  $hangmanBestTime = "0";
 
     public function __construct()
     {
@@ -194,6 +192,22 @@ class StatisticsModel
     public function setPegBestTime(mixed $pegBestTime): void
     {
         $this->pegBestTime = $pegBestTime;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getTttTies(): mixed
+    {
+        return $this->tttTies;
+    }
+
+    /**
+     * @param mixed|string $tttTies
+     */
+    public function setTttTies(mixed $tttTies): void
+    {
+        $this->tttTies = $tttTies;
     }
 
 

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\UserModel;
 use Illuminate\Support\Facades\Hash;
 
-class UserDAO
+class UserDao
 {
 //   ***************************User DAO******************************
     public function getUser($id): UserModel //Retrieves user with UserID

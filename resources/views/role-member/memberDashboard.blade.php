@@ -22,7 +22,7 @@
                                 Play a game of Hangman.  You can play vs the computer or versus another player locally
                             </p>
                         </figcaption>
-                        <a href="#"></a>
+                        <a href="hangman"></a>
                     </figure>
                     <figure class="snip1527" style="height: 250px;">
                         <div class="image"><img style="width: 100%;height: 125px;" src="{{ asset('assets/img/peg.jpg') }}" alt="pr-sample23" /></div>

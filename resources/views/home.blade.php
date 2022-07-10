@@ -1,6 +1,6 @@
 <?php
     use Illuminate\Support\Facades\Auth;
-    use App\Services\Data\DAO\UserDAO;
+    use App\Services\Data\DAO\UserDao;
     use Illuminate\Support\Facades\Redirect;
 
     if (!Auth::check()) { Redirect::to('home')->send();}
