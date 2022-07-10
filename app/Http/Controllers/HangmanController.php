@@ -5,8 +5,10 @@ use App\Services\Business\DTO\Gameplay\HangmanMethods;
 use App\Services\Data\DAO\HangmanDao;
 use Illuminate\Support\Collection;
 use Illuminate\Http\Request;
-use App\Models\HangmanModel;
+use App\Models\HangmanEdit;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class HangmanController extends Controller{
     public function start()
@@ -62,7 +64,41 @@ class HangmanController extends Controller{
         //return view('debug')->with($data);
         return view('games.hangman')->with($data);
     }
-    public function getIndexForm(Request $request, $value): HangmanModel
+    public function addWord(Request $request){
+        $added = false;
+        $message = false;
+        $word = "";
+        $messageText ="";
+        $data =[ 'word' => $word, 'added'=> $added, 'message'=>$message,'messageText'=>$messageText];
+        return view('role-admin.hangmanEdit')->with($data);
+    }
+    public function deleteWord(Request $request){
+        $id = $request->id;
+        $added = false;
+        $DAO = new HangmanDao();
+        $word = $DAO->selectWord($id);
+        $DAO->deleteWord($id);
+        $message = true;
+        $messageText = $word." was deleted from the database.";
+        $data =[ 'word' => $word, 'added'=> $added, 'message'=>$message,'messageText'=>$messageText];
+
+        return view('role-admin.hangmanEdit')->with($data);
+
+
+    }
+    public function toHangman(Request $request){
+        $word = strtolower($request->item);
+
+        $DAO = new HangmanDao();
+        $added = $DAO->insertWord($word);
+        $message = true;
+        if ($added){  $messageText = $word."was added to the Hangman database.";}
+        else{           $messageText = $word." was not added to the Hangman database \n".$word." was is already in the database";}
+        $data =[ 'word' => $word, 'added'=> $added, 'message'=>$message,'messageText'=>$messageText];
+        return view('role-admin.hangmanEdit')->with($data);
+
+    }
+    public function getIndexForm(Request $request, $value): HangmanEdit
     {
         $letter0 = $request->letter0;
         $letter1 = $request->letter1;
@@ -93,7 +129,7 @@ class HangmanController extends Controller{
 
 
 
-        $model = new HangmanModel($letter0, $letter1, $letter2, $letter3, $letter4, $letter5, $letter6, $letter7, $letter8,
+        $model = new HangmanEdit($letter0, $letter1, $letter2, $letter3, $letter4, $letter5, $letter6, $letter7, $letter8,
                                 $letter9, $letter10, $letter11, $letter12, $letter13, $letter14, $letter15, $letter16, $letter17,
                                 $letter18, $letter19, $letter20, $letter21, $letter22, $letter23, $letter24, $letter25);
         switch ($request->index){
@@ -178,4 +214,5 @@ class HangmanController extends Controller{
         }
         return $model;
     }
+
 }

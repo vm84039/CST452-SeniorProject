@@ -1,6 +1,6 @@
 <?php
 
 ?>
-<p> {{$char}}  {{$answer}} {{$match}} {{$index}}
-
- </p>
+<h1>
+{{$id}}
+ </h1>

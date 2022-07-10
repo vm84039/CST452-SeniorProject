@@ -1,3 +1,14 @@
+<?php
+use App\Services\Data\DAO\UserDao;
+use Illuminate\Support\Facades\Auth;
+$UserDao = new UserDao();
+if (Auth::check()) {
+    $user = $UserDao->getUser(AUTH::id());
+}
+?>
+@if (Auth::check())
+    {{--        **********************Member Sidebar***************************--}}
+    @if ($user->getRoleId() == '1')
         <div id="sidebar">
             <nav>
                 <div class="sidebar-header">
@@ -33,6 +44,42 @@
                 </ul>
             </nav>
         </div>
+        {{--        ****************************************************************--}}
+    @endif
+    {{--        **********************Admin Sidebar***************************--}}
+    @if ($user->getRoleId() == '2')
+        <div id="sidebar">
+            <nav>
+                <div class="sidebar-header">
+                    <h3>Administration Profile</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li>
+                        <a style="color: midnightblue" href="home">
+                            <i class="glyphicon glyphicon-home"></i>
+                            User Administration
+                        </a>
+                    </li>
+                    <li>
+                        <a style="color: midnightblue" href="profile">
+                            <i class="glyphicon glyphicon-briefcase"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a style="color: midnightblue" href="hangmanEdit">
+                            <i class="glyphicon glyphicon-duplicate"></i>
+                            Hangman Words Edit
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    @endif
+@endif
+
+
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <!-- Bootstrap Js CDN -->

@@ -1,6 +1,6 @@
 <?php
 namespace App\Services\Business\DTO\Gameplay;
-use App\Models\HangmanModel;
+use App\Models\HangmanEdit;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use App\Services\Data\DAO\HangmanDao;

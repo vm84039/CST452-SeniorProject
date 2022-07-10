@@ -32,7 +32,7 @@ $profile = $ProfileDao->getProfile(Auth::ID());
                     @csrf
                     <input type="hidden" value="-1" name="roleId">
                     <div class="row" style="margin-bottom: 25px;text-align: left;">
-                        <div class="col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2" style="display: inline;text-align: center;margin-bottom: 25px;"><img class="rounded-circle mb-3 mt-4 img-fluid" src="{{ asset('assets/img/profile.png') }}" style="display: inline;max-height: 110px;"><br></div>
+                        <div class="col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2" style="display: inline;text-align: center;margin-bottom: 25px;"><img class="rounded-circle mb-3 mt-4 img-fluid" src="{{ asset('assets/img/profile.jpg') }}" style="display: inline;max-height: 110px;"><br></div>
                         <div class="col-sm-8 col-md-8 col-lg-9 col-xl-10 col-xxl-10 align-self-center">
                             <div class="row">
                                 <div class="col-md-12 text-start">
@@ -124,8 +124,8 @@ $profile = $ProfileDao->getProfile(Auth::ID());
                             <p id="emailErrorMsg" class="text-danger" style="display:none;"></p>
                             <p id="passwordErrorMsg" class="text-danger" style="display:none;"></p>
                         </div>
-                        <div class="col-md-12" style="text-align: right;margin-top: 5px;"><button class="btn btn-primary btn-sm" id="submitBtn" type="submit">Save Settings</button></div>
                     </div>
+                    <div style="text-align: right;margin-top: 5px;"> <input class="btn btn-primary button-img" type="submit" value="Save Settings"></div>
                 </form>
             </div>
         </div>

@@ -211,36 +211,36 @@ img{
 }
 .hangman{
     display: block;
+
     margin-bottom: 100px;
     margin-right:100px;
-    height:300px;
-    width:20%;
+    height:50%;
+    width:30%;
 }
-.hboard{
+.dictionary{
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    margin: 100px 150px 100px 100px;
-
+    grid-template-columns: repeat(15, 1fr);
 }
+.dline{
 
-.alphabet{
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 2vw;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    padding-left: 0px;
-    padding-top: 10px;
+    text-transform: lowercase;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+.alphabet{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
 }
 .abutton{
     font-family: Helvetica;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 2em;
     justify-content: center;
     align-items: center;
     color:forestgreen;
-
+    margin: 5px;
 }
 .abox
 {
@@ -248,7 +248,7 @@ img{
     text-decoration: line-through red;
     font-family: Helvetica;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 2em;
     justify-content: center;
     align-items: center;
     color:forestgreen;
@@ -263,7 +263,6 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
 
 }
 .aboard{
@@ -275,6 +274,11 @@ img{
 }
 .hide{
     color: white;
+}
+.button-img{
+    background-color: #68889E;
+    color:#FFF;
+    border-color: #2F3E48;
 }
 
 
