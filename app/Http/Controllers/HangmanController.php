@@ -9,6 +9,7 @@ use App\Services\Data\DAO\HangmanDao;
 use Illuminate\Support\Collection;
 use Illuminate\Http\Request;
 use App\Models\HangmanEdit;
+use App\Models\HangmanModel;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -101,7 +102,7 @@ class HangmanController extends Controller{
         return view('role-admin.hangmanEdit')->with($data);
 
     }
-    public function getIndexForm(Request $request, $value): HangmanEdit
+    public function getIndexForm(Request $request, $value): HangmanModel
     {
         $letter0 = $request->letter0;
         $letter1 = $request->letter1;
@@ -132,7 +133,7 @@ class HangmanController extends Controller{
 
 
 
-        $model = new HangmanEdit($letter0, $letter1, $letter2, $letter3, $letter4, $letter5, $letter6, $letter7, $letter8,
+        $model = new HangmanModel($letter0, $letter1, $letter2, $letter3, $letter4, $letter5, $letter6, $letter7, $letter8,
                                 $letter9, $letter10, $letter11, $letter12, $letter13, $letter14, $letter15, $letter16, $letter17,
                                 $letter18, $letter19, $letter20, $letter21, $letter22, $letter23, $letter24, $letter25);
         switch ($request->index){
