@@ -1,4 +1,9 @@
 <?php
+
+/*Vinson Martin CST-451
+Brain Games App
+HangmanMethods
+Supports Hangman Gameplay */
 namespace App\Services\Business\DTO\Gameplay;
 use App\Models\HangmanEdit;
 use Carbon\Carbon;

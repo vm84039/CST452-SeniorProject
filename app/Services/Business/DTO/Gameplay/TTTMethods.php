@@ -1,4 +1,8 @@
 <?php
+/*Vinson Martin CST-451
+Brain Games App
+TicTacToe Methods
+Supports TicTacToe Gameplay */
 namespace App\Services\Business\DTO\Gameplay;
 use App\Models\TTTModel;
 use App\Services\Data\DAO\TitTacToeDao;

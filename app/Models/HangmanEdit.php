@@ -1,4 +1,8 @@
 <?php
+/*Vinson Martin CST-451
+Brain Games App
+Hangman Edit Model
+Model Allows Admin to manipulate Hangman Dictionary */
 namespace App\Models;
 class HangmanEdit
 {

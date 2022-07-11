@@ -1,4 +1,8 @@
 <?php
+/*Vinson Martin CST-451
+Brain Games App
+StatisticsDAO
+Stores Statistics information in Database */
 namespace App\Services\Data\DAO;
 
 use App\Models\User;

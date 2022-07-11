@@ -1,4 +1,8 @@
 <?php
+/*Vinson Martin CST-451
+Brain Games App
+Tic Tac Toe Controller
+Methods that control the Tic-Tac-Toe game and statistics collection */
 
 namespace App\Http\Controllers;
 use App\Services\Business\DTO\Gameplay\TTTMethods;

@@ -1,4 +1,7 @@
 <?php
+/*
+User Model Method that creates a class to store user info to send
+and receive from database.  */
 
 namespace App\Models;
 

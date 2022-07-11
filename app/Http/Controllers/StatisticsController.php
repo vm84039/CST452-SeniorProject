@@ -1,4 +1,8 @@
 <?php
+/*Vinson Martin CST-451
+Brain Games App
+Statistics Controller
+Methods that control Statistic reset method */
 
 namespace App\Http\Controllers;
 

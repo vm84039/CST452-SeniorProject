@@ -1,6 +1,7 @@
 <?php
-/*CST256 Milestone 3 Version 1
-Vinson Martin 5/20/2022,
+/*Vinson Martin CST-451
+Brain Games App
+Methods that control the Hangman game and statistics collection
 ProfileController Method that controls POST values from forms.  */
 
 namespace App\Http\Controllers;

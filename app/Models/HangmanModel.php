@@ -1,4 +1,9 @@
 <?php
+/*Vinson Martin CST-451
+Brain Games App
+Hangman Edit Model
+Model sets alphabet for hangman game*/
+
 namespace App\Models;
 class HangmanModel
 {

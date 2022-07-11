@@ -1,5 +1,8 @@
 <?php
-
+/*Vinson Martin CST-451
+Brain Games App
+Hangman Controller
+Methods that control the Hangman game and statistics collection */
 namespace App\Http\Controllers;
 use App\Services\Business\DTO\Gameplay\HangmanMethods;
 use App\Services\Data\DAO\HangmanDao;

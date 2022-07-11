@@ -1,4 +1,8 @@
 <?php
+/*Vinson Martin CST-451
+Brain Games App
+Statistcs Model
+Model sets manipulates game record statistics*/
 
 namespace App\Models;
 

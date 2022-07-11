@@ -1,5 +1,8 @@
 <?php
-
+/*Vinson Martin CST-451
+Brain Games App
+Login Controller
+Methods that control the Login */
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;

@@ -1,6 +1,9 @@
 <?php
+/*Vinson Martin CST-451
+Brain Games App
+HangmanDao
+Stores Hangman Dictionary Word in Database */
 namespace App\Services\Data\DAO;
-
 use Illuminate\Support\Facades\DB;
 
 

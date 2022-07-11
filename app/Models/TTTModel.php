@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Models;
-
+/*Vinson Martin CST-451
+Brain Games App
+TicTacToe Model
+Model sets starting information for TicTacToe game*/
 class TTTModel
 {
     private mixed $first;
