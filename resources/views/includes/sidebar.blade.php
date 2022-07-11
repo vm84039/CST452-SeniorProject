@@ -35,7 +35,7 @@ if (Auth::check()) {
                         </a>
                     </li>
                     <li>
-                        <a href="LogOut">
+                        <a href="logout">
                             <i class="glyphicon glyphicon-duplicate"></i>
                             Log Out
                         </a>
