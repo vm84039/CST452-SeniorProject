@@ -16,11 +16,11 @@
                     </div><br />
                 @endif
 
-                <div class="card-body">
+                <div style="color:#2c3e50;" class="card-body">
                     <form method="POST" action="login">
                         @csrf
 
-                        <div style="color:#2c3e50;" class="row mb-3">
+                        <div  class="row mb-3">
                             <label for="username" class="col-md-4 col-form-label text-md-end">{{ __('Username') }}</label>
 
                             <div class="col-md-6">

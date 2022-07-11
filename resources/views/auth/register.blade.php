@@ -21,7 +21,7 @@ if (Auth::check()) { Redirect::to('home')->send();}
                         </div><br />
                     @endif
 
-                    <div class="signup">
+                    <div  style="color:#2c3e50;" class="signup">
                         <form method="POST" action="register">
                             @csrf
 
