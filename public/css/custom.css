@@ -211,11 +211,10 @@ img{
 }
 .hangman{
     display: block;
-
     margin-bottom: 100px;
     margin-right:100px;
-    height:50%;
-    width:30%;
+    width:20%;
+    height: 300px;
 }
 .dictionary{
     display: grid;
@@ -240,7 +239,7 @@ img{
     justify-content: center;
     align-items: center;
     color:forestgreen;
-    margin: 5px;
+
 }
 .abox
 {
@@ -266,7 +265,7 @@ img{
 
 }
 .aboard{
-    margin: 150px 10px 50px 10px;
+    margin: 150px 150px 250px 150px;
     color: #2c3e50;
     display: grid;
     grid-template-columns: repeat(15, 1fr);

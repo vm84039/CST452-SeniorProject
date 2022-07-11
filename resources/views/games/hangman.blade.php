@@ -96,7 +96,7 @@ $j=0;
                         <input type="hidden" id="letter24" name="letter24" value={{$letter24}}>
                         <input type="hidden" id="letter25" name="letter25" value={{$letter25}}>
                         <img class="hangman" src="{{ asset('assets/img/hangman/'.$board.'.png') }}">
-                        <div class="hboard">
+                        <div class="aboard">
 
                         @for($i='A'; $i!='AA'; $i++)
                             @if (($letters[$j] != 0)||($board >= 8) || ($count == $size ))
