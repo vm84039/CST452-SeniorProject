@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Services\Data\DAO\UserDao;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -45,6 +46,7 @@ class LoginController extends Controller
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
+        Session::flush();
 
         return redirect('/');
     }

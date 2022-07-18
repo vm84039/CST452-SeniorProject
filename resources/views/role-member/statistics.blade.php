@@ -47,6 +47,21 @@ $statistics = $StatisticsDao->getStatistics(Auth::ID());
                         <div class="col-md-6">
                             <div class="mb-3"><label class="form-label " for="phone"><strong>Hangman Best Time</strong></label><input class="form-control bfh-phone" data-format="(ddd) ddd-dddd" type="text" value="{{$statistics->getHangmanBestTime()}}" name="phone" readonly></div>
                         </div>
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 fw-bold"> Peg Statistics </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3"><label class="form-label " for="phone"><strong>You are a genious!!</strong></label><input class="form-control bfh-phone" data-format="(ddd) ddd-dddd" type="text" value="{{$statistics->getPeg1()}}" name="phone" readonly></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3"><label class="form-label " for="phone"><strong>You are pretty smart</strong></label><input class="form-control bfh-phone" data-format="(ddd) ddd-dddd" type="text" value="{{$statistics->getPeg2()}}" name="phone" readonly></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3"><label class="form-label " for="phone"><strong>You are just plain dumb</strong></label><input class="form-control bfh-phone" data-format="(ddd) ddd-dddd" type="text" value="{{$statistics->getPeg3()}}" name="phone" readonly></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3"><label class="form-label " for="phone"><strong>You are just a plain "EG-NO-RA-Moose</strong></label><input class="form-control bfh-phone" data-format="(ddd) ddd-dddd" type="text" value="{{$statistics->getPeg4()}}" name="phone" readonly></div>
+                    </div>
                 </div>
                 <a style="margin-left: 10%" class="btn-lg btn-primary" href="resetStatistics" role="button">Reset</a>
             </div>

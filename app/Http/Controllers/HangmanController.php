@@ -11,8 +11,6 @@ use Illuminate\Http\Request;
 use App\Models\HangmanEdit;
 use App\Models\HangmanModel;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
 
 class HangmanController extends Controller{
     public function start()

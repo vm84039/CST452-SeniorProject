@@ -89,3 +89,7 @@ Route::post('/toHangman', 'App\Http\Controllers\HangmanController@toHangman');
 Route::get('/hangmanEdit', 'App\Http\Controllers\HangmanController@addWord');
 Route::post('/deleteWord', 'App\Http\Controllers\HangmanController@deleteWord');
 
+Route::get('/peg', 'App\Http\Controllers\PegController@start');
+Route::post('/choosePeg', 'App\Http\Controllers\PegController@choosePeg');
+Route::post('/jump', 'App\Http\Controllers\PegController@jump');
+

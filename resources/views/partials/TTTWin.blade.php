@@ -1,10 +1,10 @@
 <?php
 use App\Services\Data\DAO\StatisticsDAO;
 use Illuminate\Support\Facades\Auth;
-use App\Services\Business\DTO\Gameplay\TTTMethods;
+use App\Services\Business\DTO\Gameplay\PegMethods;
 
 $StatisticsDAO = new StatisticsDAO();
-$DTO = new TTTMethods();
+$DTO = new PegMethods();
 
 switch($win){
     case 1:

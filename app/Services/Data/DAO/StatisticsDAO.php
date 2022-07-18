@@ -22,6 +22,10 @@ class StatisticsDAO {
             'hWins' => 0,
             'hLosses' => 0,
             'hBestTime' => 0,
+            'peg1' => 0,
+            'peg2' => 0,
+            'peg3' => 0,
+            'peg4' => 0,
         ]);
     }
     public function getAllStatistics(): \Illuminate\Support\Collection
@@ -42,6 +46,10 @@ class StatisticsDAO {
             'hWins' => 0,
             'hLosses' => 0,
             'hBestTime' => NULL,
+            'peg1' => 0,
+            'peg2' => 0,
+            'peg3' => 0,
+            'peg4' => 0,
         ]);
 
     }
@@ -62,6 +70,10 @@ class StatisticsDAO {
                 'hWins' => 0,
                 'hLosses' => 0,
                 'hBestTime' => NULL,
+                'peg1' => 0,
+                'peg2' => 0,
+                'peg3' => 0,
+                'peg4' => 0,
             ]);
         }
         else {
@@ -75,6 +87,10 @@ class StatisticsDAO {
             $statistics->setHangmanWins($row->hWins);
             $statistics->setHangmanLosses($row->hLosses);
             $statistics->setHangmanBestTime($row->hBestTime);
+            $statistics->setPeg1($row->peg1);
+            $statistics->setPeg2($row->peg2);
+            $statistics->setPeg3($row->peg3);
+            $statistics->setPeg4($row->peg4);
         }
         return $statistics;
     }
@@ -135,9 +151,29 @@ class StatisticsDAO {
             ->increment('hLosses');
 
     }
-    public function bestTimeHangman(): void
+    public function peg1(mixed $id): void
     {
-
+        DB::table('statistics')
+            ->where('userID', '=', $id)
+            ->increment('peg1');
+    }
+    public function peg2(mixed $id): void
+    {
+        DB::table('statistics')
+            ->where('userID', '=', $id)
+            ->increment('peg2');
+    }
+    public function peg3(mixed $id): void
+    {
+        DB::table('statistics')
+            ->where('userID', '=', $id)
+            ->increment('peg3');
+    }
+    public function peg4(mixed $id): void
+    {
+        DB::table('statistics')
+            ->where('userID', '=', $id)
+            ->increment('peg4');
     }
     public function bestScoreHangman(): void
     {

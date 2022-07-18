@@ -267,6 +267,43 @@ img{
     color:#FFF;
     border-color: #2F3E48;
 }
+.pegImage{
+    position: absolute;
+    width: 600px;
+    height: 525px;
+    z-index: 50;
+    margin-top: 50px;
+    margin-left: 25px;
+
+}
+.pegBoard{
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(5, 50px);
+    grid-column-gap: 0px;
+    grid-row-gap: 50px;
+    margin:100px;
+    z-index: 999;
+    position: relative;
+
+}
+.pegDiv1 { color: yellow; grid-area: 1 / 5 / 2 / 6; }
+.pegDiv2 { color: blue; grid-area: 2 / 4 / 3 / 5; }
+.pegDiv3 { color: forestgreen; grid-area: 2 / 6 / 3 / 7; }
+.pegDiv4 { color: red; grid-area: 3 / 3 / 4 / 4; }
+.pegDiv5 { color: yellow; grid-area: 3 / 5 / 4 / 6; }
+.pegDiv6 { color: blue; grid-area: 3 / 7 / 4 / 8; }
+.pegDiv7 { color: forestgreen; grid-area: 4 / 2 / 5 / 3; }
+.pegDiv8 { color: red; grid-area: 4 / 4 / 5 / 5; }
+.pegDiv9 { color: yellow; grid-area: 4 / 6 / 5 / 7; }
+.pegDiv10 { color: blue; grid-area: 4 / 8 / 5 / 9; }
+.pegDiv11 { color: forestgreen; grid-area: 5 / 1 / 6 / 2; }
+.pegDiv12 { color: red; grid-area: 5 / 3 / 6 / 4; }
+.pegDiv13 { color: yellow; grid-area: 5 / 5 / 6 / 6; }
+.pegDiv14 { color: blue; grid-area: 5 / 7 / 6 / 8; }
+.pegDiv15 { color: forestgreen; grid-area: 5 / 9 / 6 / 10; }
+
+
 
 
 

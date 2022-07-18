@@ -32,7 +32,7 @@
                                 Play a game of peg.  How many pegs can you remove.
                             </p>
                         </figcaption>
-                        <a href="#"></a>
+                        <a href="peg"></a>
                     </figure>
                 </div>
             </div>

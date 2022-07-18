@@ -5,7 +5,7 @@ Tic Tac Toe Controller
 Methods that control the Tic-Tac-Toe game and statistics collection */
 
 namespace App\Http\Controllers;
-use App\Services\Business\DTO\Gameplay\TTTMethods;
+use App\Services\Business\DTO\Gameplay\PegMethods;
 use Illuminate\Support\Collection;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -33,7 +33,7 @@ class TTTController extends Controller{
     }
     public function takeTurn(Request $request)
     {
-        $DTO = new TTTMethods();
+        $DTO = new PegMethods();
         $square1 = $request->square1;
         $square2 = $request->square2;
         $square3 = $request->square3;

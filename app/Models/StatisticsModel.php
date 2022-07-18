@@ -17,6 +17,11 @@ class StatisticsModel
     private mixed  $hangmanWins = 0;
     private mixed  $hangmanLosses = 0;
     private mixed  $hangmanBestTime = "0";
+    private mixed  $peg1 = "0";
+    private mixed  $peg2 = "0";
+    private mixed  $peg3 = "0";
+    private mixed  $peg4 = "0";
+
 
     public function __construct()
     {
@@ -213,6 +218,71 @@ class StatisticsModel
     {
         $this->tttTies = $tttTies;
     }
+
+    /**
+     * @return mixed|string
+     */
+    public function getPeg1(): mixed
+    {
+        return $this->peg1;
+    }
+
+    /**
+     * @param mixed|string $peg1
+     */
+    public function setPeg1(mixed $peg1): void
+    {
+        $this->peg1 = $peg1;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getPeg2(): mixed
+    {
+        return $this->peg2;
+    }
+
+    /**
+     * @param mixed|string $peg2
+     */
+    public function setPeg2(mixed $peg2): void
+    {
+        $this->peg2 = $peg2;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getPeg3(): mixed
+    {
+        return $this->peg3;
+    }
+
+    /**
+     * @param mixed|string $peg3
+     */
+    public function setPeg3(mixed $peg3): void
+    {
+        $this->peg3 = $peg3;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getPeg4(): mixed
+    {
+        return $this->peg4;
+    }
+
+    /**
+     * @param mixed|string $peg4
+     */
+    public function setPeg4(mixed $peg4): void
+    {
+        $this->peg4 = $peg4;
+    }
+
 
 
 }
