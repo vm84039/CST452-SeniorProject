@@ -1,12 +1,11 @@
 <?php
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-use App\Services\Business\DTO\Gameplay\PegMethods;
+use App\Services\Business\DTO\Gameplay\TTTMethods;
 use App\Services\Data\DAO\UserDao;
-use App\Services\Data\DAO\HangmanDao;
 
 if (!Auth::check()) { Redirect::to('home')->send();}
-$DTO = new PegMethods();
+$DTO = new TTTMethods();
 $UserDao = new UserDao();
 $user = $UserDao->getUser(Auth::ID());
 
