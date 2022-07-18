@@ -41,7 +41,7 @@ $j=0;
 @section('content')
     <div id = "main">
         <div class="card shadow mb-3 profile">
-            <div class="card-body" style="margin: 150px;">
+            <div class="card-body" style="margin: 50px;">
                  @if($board >= 8 )
 
                         <p class="results">Sorry you lost<br><br></p>
@@ -106,7 +106,7 @@ $j=0;
                         @endfor
                         <br><br>
                     </div>
-                    <div class ="aboard">
+                    <div class ="aboard" style="grid-template-columns: repeat(15, 50px);">
                         <?php
                         for($i=0;$i<strlen($answer); $i++) {
                             $char = substr($answer, $i, 1);
