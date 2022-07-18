@@ -60,9 +60,6 @@ $j=0;
                             <br><br>
                         </p>
                  @endif
-
-
-
                     <form method="POST" action="chooseLetter">
                         @csrf
                         <input type="hidden" id="statTime" name="startTime" value={{$startTime}}>
@@ -97,7 +94,6 @@ $j=0;
                         <input type="hidden" id="letter25" name="letter25" value={{$letter25}}>
                         <img class="hangman" src="{{ asset('assets/img/hangman/'.$board.'.png') }}">
                         <div class="aboard">
-
                         @for($i='A'; $i!='AA'; $i++)
                             @if (($letters[$j] != 0)||($board >= 8) || ($count == $size ))
                             <div class="alphabet abox">{{$i}}</div>
