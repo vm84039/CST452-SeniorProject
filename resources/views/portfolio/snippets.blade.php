@@ -1,50 +1,54 @@
 @extends('layouts.portfolio')
-@section('title', 'Class Diagrams')
+@section('title', 'Code Snippets')
 @section('content')
       <h3 class="portfolio" style="text-align: center;margin-bottom: 100px">Code Snippets<br></h3>
-      <div class="accordion" id="accordionExample" style="margin-left: 250px">
+      <div style="margin-left: 250px;margin-right: 100px" class="accordion" id="accordionExample">
           <div class="card">
               <div class="card-header" id="headingOne">
-                  <h5 class="mb-0">
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                           Tic-Tac-Toe Code Snippet
                       </button>
-                  </h5>
+                  </h2>
               </div>
 
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body" style="  height:1500px; background: white; float:left; margin: 25px 50px 50px 10%;">
+                      <img style=" width: 100%; height:100%;  " src="{{ asset('assets/img/tSnippet.png') }}" alt="GCU" />
                   </div>
               </div>
           </div>
           <div class="card">
               <div class="card-header" id="headingTwo">
-                  <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Collapsible Group Item #2
+                  <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Hangman Code Snippet
                       </button>
-                  </h5>
+                  </h2>
               </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body" style="  height: 1500px; background: white; float:left; margin: 25px 50px 50px 10%;">
+                      <img style=" width: 100%; height:100%;  " src="{{ asset('assets/img/hSnippet.png') }}" alt="GCU" />
                   </div>
               </div>
           </div>
           <div class="card">
               <div class="card-header" id="headingThree">
-                  <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Collapsible Group Item #3
+                  <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Peg Code Snippets
                       </button>
-                  </h5>
+                  </h2>
               </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                  <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body" style="  height:1500px; background: white; float:left; margin: 25px 50px 50px 5%;">
+                      <img style=" width: 100%; height:100%;  " src="{{ asset('assets/img/pSnippet1.png') }}" alt="GCU" />
+                  </div>
+                  <div class="card-body" style="  height:1500px; background: white; float:left; margin: 25px 50px 50px 5%;">
+                      <img style=" width: 100%; height:100%;  " src="{{ asset('assets/img/pSnippet2.png') }}" alt="GCU" />
                   </div>
               </div>
           </div>
       </div>
+    <script></script>
 @stop
