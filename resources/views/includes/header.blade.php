@@ -21,7 +21,7 @@
                 </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ms-auto navHeader" >
+                <ul class="navbar-nav ms-auto navHeader" style="margin-right: 100px" >
                     <!-- Authentication Links -->
 
                     @if (!Auth::check())

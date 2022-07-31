@@ -4,11 +4,17 @@
             <p>Vinson Martin's<br>Portfolio</p>
         </div>
 
-        <ul class="list-unstyled components">
+        <ul class="list-unstyled components" style="color:white">
             <li>
                 <a href="/">
                     <i class="glyphicon glyphicon-home"></i>
                     Welcome
+                </a>
+            </li>
+            <li>
+                <a href="brainGames">
+                    <i class="glyphicon glyphicon-home"></i>
+                    Brain Games App
                 </a>
             </li>
             <li>
@@ -44,16 +50,9 @@
             <li>
                 <a href="apps">
                     <i class="glyphicon glyphicon-duplicate"></i>
-                    Web Applications
+                    Past GCU Projects
                 </a>
             </li>
-            <li>
-                <a href="logout">
-                    <i class="glyphicon glyphicon-duplicate"></i>
-                    Log Out
-                </a>
-            </li>
-
         </ul>
     </nav>
 </div>
