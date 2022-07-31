@@ -5,15 +5,11 @@ Brain Games App
 HangmanMethods
 Supports Hangman Gameplay */
 namespace App\Services\Business\DTO\Gameplay;
-use App\Models\HangmanEdit;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use App\Services\Data\DAO\HangmanDao;
 class HangmanMethods {
-
-    private static $player1;
-    private static $player2;
-
+//input is the letter chosen on the hangman board.  Returns array index.
     public function getIndex(mixed $letter): int
     {
         return match ($letter) {
@@ -45,6 +41,7 @@ class HangmanMethods {
             'z' => 25,
         };
     }
+//input is the array index.  Returns matching letter
     public function getChar(mixed $index): string
     {
         return match ((int) $index) {
@@ -76,29 +73,22 @@ class HangmanMethods {
             25 => 'z',
         };
     }
+ //checks to see if the hangman word contains the chosen letter.
     public function match(mixed $i, mixed $wordId){
         $DAO = new HangmanDao();
         $answer = $DAO->selectWord($wordId);
         return Str::contains($answer, strtolower($i));
     }
+    //return game time from start to end of game
     public function time ($startTime): float|int
     {
         $endTime = Carbon::now()->format('h:i:s');;
         $time =  Carbon::parse($startTime)->diffInSeconds(Carbon::parse($endTime));
         return $time;
     }
+ //display game time in seconds
     public function displayTime($time): string
     {
         return gmdate('s', $time);
     }
-
-    public function userTurn(){
-    }
-    public function computerTurn(){
-    }
-    public function checkWin(){
-    }
-    public function gameResults(){
-    }
-
 }

@@ -1,5 +1,5 @@
 <?php
-/*Vinson Martin CST-451
+/*Vinson Martin CST-452
 Brain Games App
 Peg Methods
 Supports Peg Gameplay */
@@ -10,7 +10,8 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Session;
 
 class PegMethods {
-
+//Jump methods has takes the input of the current position chosen by the player and returns all available positions
+//players can choose to jump and remove a peg.
     public function jump(mixed $position): Collection
     {
         $temp = collect();
@@ -122,7 +123,8 @@ class PegMethods {
         return $temp;
     }
 
-
+//remove takes input of the original array position and the jump array position to
+//assign a remove value that represents the peg piece to remove and pass to removeNum method
     public function remove(mixed $original, mixed $jump): void
     {
         $remove =0;
@@ -196,7 +198,8 @@ class PegMethods {
         $this->removeNum($original, $jump, $remove);
 
     }
-
+//remove Num takes the original peg position, new peg position after jump, and which position
+//to remove a peg and updates the game board
     private function removeNum(mixed $original, mixed $jump, int $remove): void
     {
         $board = session('board');
@@ -209,6 +212,7 @@ class PegMethods {
             $i++;
         }
     }
+    //clears the $jump session Collection
     public function clearJump(): void
     {
         $jump = session('jump');
@@ -216,6 +220,7 @@ class PegMethods {
         $jump = collect();
         Session::put('jump', $jump);
     }
+    //clears the $button session Collection
     public function clearButton(): void
     {
         $button = session('button');
@@ -223,6 +228,8 @@ class PegMethods {
         $button = collect();
         Session::put('button', $button);
     }
+//sets the new values of the $button Collection which are the movable pieces in
+//the peg game
     public function newButtons(): void
     {
 
@@ -242,6 +249,8 @@ class PegMethods {
         }
         Session::put('button', $button);
     }
+//sets the new values of the $pieces Collection which are the non-movable pieces in
+//the peg game
     public function getPiece(mixed $position){
         $i=0;
         $piece =0;
@@ -252,7 +261,8 @@ class PegMethods {
         }
         return $piece;
     }
-
+//gets the values of the $empties Collection which are the empty elements in
+//the peg game
     private function getEmpties(): Collection
     {
         $board = session('board');
@@ -266,6 +276,8 @@ class PegMethods {
         }
         return $empties;
     }
+//gets the values of the $full Collection which are the non-empty elements in
+//the peg game
     public function getFull(): Collection
     {
         $board = session('board');
@@ -281,7 +293,8 @@ class PegMethods {
         return $full;
     }
 
-
+//checks to see if there are any jumps available in the game.  If no jumps
+//are available, $over array is empty, returns 0 which means the game is over.
     public function gameOver(): int
     {
         $full=$this->getFull();
@@ -299,6 +312,7 @@ class PegMethods {
         if ($over->count()>0) {return 0;}
         return 1;
     }
+// Displays game results messaged based upon the number of pegs remaining
     public function getMessage(mixed $num){
         return match ($num) {
             1 => 'You are a genious!!',
@@ -307,6 +321,7 @@ class PegMethods {
             default => 'You are just a plain "EG-NO-RA-Moose"'
         };
     }
+//input of user id number and number of pegs remaining to send to database to save game results
     public function record(mixed $id, mixed $num): void
     {
         $DAO = new StatisticsDAO();

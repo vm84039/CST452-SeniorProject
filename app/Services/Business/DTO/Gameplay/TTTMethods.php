@@ -4,30 +4,20 @@ Brain Games App
 TicTacToe Methods
 Supports TicTacToe Gameplay */
 namespace App\Services\Business\DTO\Gameplay;
-use App\Models\TTTModel;
-use App\Services\Data\DAO\TitTacToeDao;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 
 class TTTMethods {
 
-    private static $player1;
-    private static $player2;
-
-
+//send to computerTurn method if it was the computer's turn.
     public function turn(mixed $square, mixed $board): Collection
     {
         if ($square == -1)
             $board = $this->computerTurn($board);
-        else
-            $board = $this->userTurn($board);
         return $board ;
     }
-
-
-    public function userTurn($board){
-        return $board ;
-    }
+ //chooses a random number, checks if the array square is available ( =0  ) if available, sets array position to 2
+// which is the computers number
     public function computerTurn(mixed $board): Collection
     {
         $i = rand(0, 8);
@@ -37,6 +27,7 @@ class TTTMethods {
         $board[$i] = 2;
         return $board ;
     }
+ //check if the player or computer has won the game.  returns 0 is no player has won or returns the winning player
     public function checkWin(mixed $board): int
     {
         if (($this->winConditions($board) == -1) && ($this->checkTie($board)) )
@@ -45,17 +36,20 @@ class TTTMethods {
         }
             return $this->winConditions($board);
     }
+    // record the length in time of the current game.
     public function time ($startTime): float|int
     {
         $endTime = Carbon::now()->format('h:i:s');;
         $time =  Carbon::parse($startTime)->diffInSeconds(Carbon::parse($endTime));
         return $time;
     }
+    // displays the time is seconds format
     public function displayTime($time): string
     {
         return gmdate('s', $time);
     }
-
+// if all array board positions are not equal to zero then the game is a tie and return true.
+//else return false
     public function checkTie(mixed $board): bool
     {
         $tie = true;
@@ -66,6 +60,8 @@ class TTTMethods {
         }
         return $tie;
     }
+ // checks all different scenarios a player can win, ie get three squares vertically, horizontally, or
+ // diagonally in sequence for one player,  returns the condition the player or computer has won.
     public function winConditions(mixed $board): int
     {
         $win = -1;
@@ -93,9 +89,4 @@ class TTTMethods {
         }
         return $win;
     }
-
-    public function gameResults(){
-    }
-    public function gameTime(){}
-    public function highScore(){}
 }

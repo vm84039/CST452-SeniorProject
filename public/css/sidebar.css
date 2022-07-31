@@ -91,6 +91,7 @@ ul ul a {
   transition: all 0.3s;
 }
 
+
 @media (max-width: 768px) {
   #sidebar {
     min-width: 80px;

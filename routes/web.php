@@ -93,3 +93,26 @@ Route::get('/peg', 'App\Http\Controllers\PegController@start');
 Route::post('/choosePeg', 'App\Http\Controllers\PegController@choosePeg');
 Route::post('/jump', 'App\Http\Controllers\PegController@jump');
 
+Route::get('/about', function () {
+    return view('portfolio/about');
+});
+Route::get('/apps', function () {
+    return view('portfolio/apps');
+});
+Route::get('/brainGames', function () {
+    return view('brainGames');
+});
+Route::get('/diagrams', function () {
+    return view('portfolio/diagrams');
+});
+Route::get('/screenshots', function () {
+    return view('portfolio/screenshots');
+});
+Route::get('/classes', function () {
+    return view('portfolio/classes');
+});
+Route::get('/snippets', function () {
+    return view('portfolio/snippets');
+});
+
+

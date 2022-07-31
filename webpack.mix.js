@@ -20,6 +20,8 @@ mix.postCss('resources/css/app.css', 'public/css', [
 ]);
 mix.postCss('resources/css/Pretty-Registration-Form.css', 'public/css');
 mix.postCss('resources/css/sidebar.css', 'public/css');
+mix.postCss('resources/css/portfolio.css', 'public/css');
+mix.postCss('resources/css/portfolio-sidebar.css', 'public/css');
 mix.postCss('resources/css/sidebar-1.css', 'public/css');
 mix.postCss('resources/css/dh-card-image-left-dark.css', 'public/css');
 mix.postCss('resources/css/Customizable-Background--Overlay.css', 'public/css');

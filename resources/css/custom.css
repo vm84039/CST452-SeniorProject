@@ -14,7 +14,7 @@ html, body{
     height:100%;
     margin:0 auto 0;
     position:relative;
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    background: #522398;
 }
 #footer {
     padding: 20px;
@@ -302,6 +302,21 @@ img{
 .pegDiv13 { color: yellow; grid-area: 5 / 5 / 6 / 6; }
 .pegDiv14 { color: blue; grid-area: 5 / 7 / 6 / 8; }
 .pegDiv15 { color: forestgreen; grid-area: 5 / 9 / 6 / 10; }
+
+.portfolio{
+    color:white;
+    font-family: 'Rajdhani';
+    text-align: center;
+    font-size: large;
+}
+#portfolio-sidebar {
+    border:1px solid #522398;
+    width:100px;
+    position:absolute;
+    left:0;
+    top:100px;
+    bottom:0px;
+}
 
 
 

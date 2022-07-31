@@ -1,0 +1,119 @@
+html, body{
+    margin:0;
+    padding:0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    height:100%;
+    color: #24243e;
+}
+#wrapper {
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+    margin:0 auto 0;
+    position:relative;
+    background: #522398;
+}
+#footer {
+    padding: 20px;
+    background: white;
+    height:50px;           /* Footer height */
+}
+#footer-content {
+    height:100%;
+    padding:0px;
+}
+#header-content{
+    font-size: x-large;
+    height:100%;
+
+}
+.formCard {
+    background:#24243e;
+    color: white;
+    width:80%;
+    margin: 20px;
+    padding-bottom: 25px;
+}
+.cardHeader {
+    color: #24243e;
+    background: white;
+    font-size: large;
+    margin-bottom: 25px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.push {
+    height:0px;
+    clear:both;
+    background: white;
+}
+#header {
+    height:100px;
+}
+#content {
+    height:100%;
+}
+#main {
+    margin: 0 50px 0 106px;
+    height: 100%;
+}
+img{
+    height: 75px;
+    margin:0;
+    padding: 0;
+    float: left;
+}
+.headerFooter{
+    color: #24243e;
+}
+.profile{
+    margin: 0 75px 0 125px;
+    height: 95vh;
+}
+.scroll{
+    overflow-y:auto;
+    height:80vh;
+}
+.collapsible {
+    background-color: #6d7fcc;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    margin:0;
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin:0;
+}
+
+.portfolio{
+    color:white;
+    font-family: 'Rajdhani';
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+#portfolio-sidebar {
+    border:1px solid #522398;
+    width:100px;
+    position:absolute;
+    left:0;
+    top:100px;
+    bottom:0px;
+}
+h1{
+    font-size: xx-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
